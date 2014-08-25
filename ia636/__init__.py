@@ -5,6 +5,8 @@
 # Toolbox ia636 (in alphabetical order)
 #
 
+__version__ = 'ia636 Python Toolbox for Teaching Image Processing version 0.11 25th Aug 2014'
+
 from iaapplylut import iaapplylut
 from iabwlp import iabwlp
 from iacircle import iacircle

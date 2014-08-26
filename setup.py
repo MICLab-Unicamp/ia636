@@ -11,12 +11,12 @@ def read(fname):
 
 setup(
     name="ia636",
-    version="0.11.3",
+    version="0.11.4",
     include_package_data = True,
     package_data = {
             # include images from the images package:
             'images': ['*.pgm','*.pbm','*.ppm','*.tif','*.png','*.jpg'],
-        }
+        },
     author="Roberto A Lotufo and collaborators",
     author_email="robertoalotufo@gmail.com",
     description=("Python Toolbox for Teaching Image Processing"),

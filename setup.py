@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name="ia636",
-    version="0.11.1",
+    version="0.11.2",
     include_package_data = True,
     author="Roberto A Lotufo and collaborators",
     author_email="robertoalotufo@gmail.com",
@@ -19,7 +19,7 @@ setup(
     license="BSD 3 clauses",
     keywords="image processing",
     url="https://github.com/robertoalotufo/ia636",
-    packages=['ia636'],
+    packages=['ia636','images'],
     long_description=read('README.txt'),
     classifiers=[
         "Development Status :: 4 - Beta",

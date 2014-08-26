@@ -11,7 +11,8 @@ def read(fname):
 
 setup(
     name="ia636",
-    version="0.11",
+    version="0.11.1",
+    include_package_data = True,
     author="Roberto A Lotufo and collaborators",
     author_email="robertoalotufo@gmail.com",
     description=("Python Toolbox for Teaching Image Processing"),

@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name="ia636",
-    version="0.11.5",
+    version="0.11.6",
     include_package_data = True,
     package_data = {
             # include images from the images package:

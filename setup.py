@@ -1,6 +1,7 @@
 import os
 from setuptools import setup
 
+
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
 # README file and 2) it's easier to type in the README file than to put a raw
@@ -12,18 +13,17 @@ def read(fname):
 setup(
     name="ia636",
     version="0.11.7",
-    include_package_data = True,
-    package_data = {
-            # include images from the images package:
-            '': ['*.pgm','*.pbm','*.ppm','*.tif','*.png','*.jpg'],
-        },
+    packages=['ia636'],
+    package_data={
+        'ia636': ['images/*.pgm', 'images/*.pbm', 'images/*.ppm',
+                  'images/*.tif', 'images/*.png', 'images/*.jpg']
+    },
     author="Roberto A Lotufo and collaborators",
     author_email="robertoalotufo@gmail.com",
-    description=("Python Toolbox for Teaching Image Processing"),
+    description="Python Toolbox for Teaching Image Processing",
     license="BSD 3 clauses",
     keywords="image processing",
     url="https://github.com/robertoalotufo/ia636",
-    packages=['ia636'],
     long_description=read('README.txt'),
     classifiers=[
         "Development Status :: 4 - Beta",

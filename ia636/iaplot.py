@@ -1,8 +1,10 @@
 # -*- encoding: utf-8 -*-
 # Module iaplot
 
-def iaplot(Ylist, Xlist = [], arrows_list = [],text_list = [], ylabel='y', xlabel='x', title='',colors = 'rgbmyc',shapes = '------', axis = 'tight', fig_size = [], face_color = 'w'):
+def iaplot(Ylist, Xlist = [], arrows_list = [],text_list = [], ylabel='y', xlabel='x', title='',colors = 'rgbmycrgbm',shapes = '----------', axis = 'tight'):
     import numpy as np
+    import matplotlib
+    matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     import ia636
 
@@ -12,12 +14,8 @@ def iaplot(Ylist, Xlist = [], arrows_list = [],text_list = [], ylabel='y', xlabe
        Xlist = [np.arange(len(i)) for i in Ylist]
     if isinstance(Xlist, np.ndarray):
         Xlist = [Xlist]
-    if fig_size == [] :
-        fig = plt.figure(facecolor = face_color)
-    else:
-        fig = plt.figure(figsize = fig_size, facecolor = face_color)
 
-
+    fig = plt.figure()
     plt.ylabel(ylabel)
     plt.xlabel(xlabel)
     plt.title(title)

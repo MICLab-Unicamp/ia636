@@ -1,14 +1,12 @@
 # -*- encoding: utf-8 -*-
 # Module iaapplylut
 
-from numpy import *
+import numpy as np
 
 def iaapplylut(fi, it):
     g = it[fi]
     if len(g.shape) == 3:
-        aux = zeros((3,g.shape[0],g.shape[1]), fi.dtype.name)
-        for i in range(3):
-            aux[i,:,:] = g[:,:,i]
-        g = aux
+        g = np.swapaxes(g, 0,2)
+        g = np.swapaxes(g, 1,2)
     return g
 

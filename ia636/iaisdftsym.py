@@ -1,21 +1,21 @@
 # -*- encoding: utf-8 -*-
 # Module iaisdftsym
 
-from numpy import *
+import numpy as np
 
 def iaisdftsym(F):
 
-    if len(F.shape) == 1: F = F[newaxis,newaxis,:]
-    if len(F.shape) == 2: F = F[newaxis,:,:]
+    if len(F.shape) == 1: F = F[np.newaxis,np.newaxis,:]
+    if len(F.shape) == 2: F = F[np.newaxis,:,:]
 
     n,m,p = F.shape
-    x,y,z = indices((n,m,p))
+    x,y,z = np.indices((n,m,p))
 
-    Xnovo = mod(-1*x,n)
-    Ynovo = mod(-1*y,m)
-    Znovo = mod(-1*z,p)
+    Xnovo = np.mod(-1*x,n)
+    Ynovo = np.mod(-1*y,m)
+    Znovo = np.mod(-1*z,p)
 
-    aux = conjugate(F[Xnovo,Ynovo,Znovo])
+    aux = np.conjugate(F[Xnovo,Ynovo,Znovo])
 
-    return alltrue(abs(F-aux)<10E-4)
+    return (abs(F-aux)<10E-4).all()
 

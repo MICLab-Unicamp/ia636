@@ -9,10 +9,10 @@ def iapca(X):
     mu = X.mean(axis=0)
     X = X - mu
 
-    C = np.dot(X.T,X)/(n-1)  # Covariance matrix
-    e,V = np.linalg.eigh(C) # eigenvalues and eigenvectors of the covariance matrix
+    C = (X.T).dot(X)/(n-1)        # Covariance matrix
+    e,V = np.linalg.eigh(C)       # eigenvalues and eigenvectors of the covariance matrix
     indexes = np.argsort(e)[::-1] # sorting eigenvalues from largest
-    e  = e [indexes]         # update e and V
+    e  = e [indexes]              # update e and V
     V = V[:,indexes]
     return V,e,mu
 

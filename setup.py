@@ -12,7 +12,7 @@ def read(fname):
 
 setup(
     name="ia636",
-    version="0.11.8",
+    version="0.12",
     packages=['ia636'],
     package_data={
         'ia636': ['images/*.pgm', 'images/*.pbm', 'images/*.ppm',
